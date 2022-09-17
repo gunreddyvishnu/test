@@ -46,3 +46,6 @@ void loop() {
 }
 
 ///map ss
+// git commit -am "make it better"
+
+// git push -u origin main  

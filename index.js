@@ -148,7 +148,8 @@
 
 //// code 4 
 
-
+const { exec } = require('node:child_process');
+var spawn = require('child_process');
 const fs = require('fs');
 
 const buttonPressesLogFile = './src/main.cpp';
@@ -158,5 +159,16 @@ console.log(`Watching for file changes on ${buttonPressesLogFile}`);
 fs.watchFile(buttonPressesLogFile, (curr, prev) => {
 
 console.log(fs.readFileSync(buttonPressesLogFile).toString())
+
+
+exec('git commit -am "make it better" && git push -u origin main', (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
+  console.error(`stderr: ${stderr}`);
 });
+});
+//pink
 // ss
