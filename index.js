@@ -166,8 +166,8 @@ exec('git commit -am "make it better" && git push -u origin main', (error, stdou
     console.error(`exec error: ${error}`);
     return;
   }
-  console.log(`stdout: ${stdout}`);
-  console.error(`stderr: ${stderr}`);
+  console.log("update");
+  // console.error(`stderr: ${stderr}`);
 });
 });
 //pink
