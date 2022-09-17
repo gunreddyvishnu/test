@@ -158,7 +158,7 @@ console.log(`Watching for file changes on ${buttonPressesLogFile}`);
 
 fs.watchFile(buttonPressesLogFile, (curr, prev) => {
 
-console.log(fs.readFileSync(buttonPressesLogFile).toString())
+// console.log(fs.readFileSync(buttonPressesLogFile).toString())
 
 
 exec('git commit -am "make it better" && git push -u origin main', (error, stdout, stderr) => {
